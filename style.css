@@ -6,10 +6,38 @@ body {
 .container {
   background-color: aqua;
   display: grid;
-  grid-template-rows: 1fr, 1fr, 1fr;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  /* Can also use fraction(fr) */
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
 }
 
 .box {
   border: solid 1px green;
+}
+
+/* Individual select column and row */
+.box-1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+/* Shorthand for column and row */
+.box-2 {
+  grid-row: 1 / 4;
+  /* The span will be reduced if there is other element taking the place */
+  grid-column: span 2;
+}
+
+/* Shorthand for all */
+.box-3 {
+  grid-area: 4 / 1 / 6 / -1;
+}
+
+/* Grid with multiple layers */
+.box-4 {
+  grid-area: 2 / 2 / 5 / 4;
+  z-index: 1;
+  background-color: green;
 }
