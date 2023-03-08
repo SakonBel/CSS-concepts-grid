@@ -1,0 +1,15 @@
+body {
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.container {
+  background-color: aqua;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.box {
+  border: solid 1px green;
+}
