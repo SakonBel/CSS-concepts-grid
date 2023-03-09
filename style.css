@@ -9,6 +9,11 @@ body {
   /* Can also use fraction(fr) */
   grid-template-rows: 100px 100px 100px 100px 100px 100px;
   grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  /* Setting special grid item to use the same unit */
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+  /* Set where you want to add extra grid item(default is adding on row) */
+  grid-auto-flow: column;
 }
 
 .box {
@@ -32,7 +37,7 @@ body {
 
 /* Shorthand for all */
 .box-3 {
-  grid-area: 4 / 1 / 6 / -1;
+  grid-area: 4 / 1 / 7 / -1;
 }
 
 /* Grid with multiple layers */
